@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Cumpleaños</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<!-- =====================================================================
+     PLANTILLA DE CUMPLEAÑOS
+     Para un cumpleaños nuevo:
+       1) Copia este archivo y ponle el nombre de la fiesta, sin espacios
+          ni acentos:  camila-30.html
+       2) Cambia SOLO lo que está entre comillas, aquí abajo.
+       3) Súbelo a GitHub. El enlace será:  tu-sitio.netlify.app/camila-30.html  (con .html al final)
+
+     Reglas:
+       · No uses comillas dobles (") dentro de los textos.
+       · data-evento: solo letras minúsculas, números y guiones. Debe ser
+         DIFERENTE en cada cumpleaños (así no se mezclan las fotos).
+       · Si no quieres algo, déjalo vacío: data-edad=""
+     ===================================================================== -->
+<body
+  data-evento="camila-30"
+  data-nombre="Camila"
+  data-edad="30"
+  data-etiqueta="Birthday"
+  data-fecha="Sábado 14 de noviembre de 2026"
+  data-lugar="Casa de Camila"
+  data-mensaje="Sube tus mejores fotos de la fiesta y escríbeme unas palabras. ¡Las pondré en mi álbum!"
+
+  data-stickers="si"
+  data-color-principal="#c8431c"
+  data-color-acento="#d9588a"
+  data-color-fondo="#fbe4ea"
+  data-color-franjas="#f9d9a8"
+  data-color-rotulo="#f3cdd5"
+  data-color-nombre="#e4572e"
+>
+  <!-- De aquí para abajo NO se toca -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/dist/umd/supabase.js"></script>
+  <script src="conexion.js"></script>
+  <script src="album.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Configuración de Netlify (se lee sola). Esta versión NO necesita "build":
+# Netlify publica los archivos tal cual están.
+[build]
+  publish = "."
+
+# Cabeceras de seguridad. La Content-Security-Policy dice qué sitios puede
+# usar la página: ella misma, la librería de Supabase (jsdelivr), las letras
+# de Google y tu proyecto de Supabase (*.supabase.co).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(self), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://*.supabase.co; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
